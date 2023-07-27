@@ -1,9 +1,5 @@
 function getpass(length){
-    const uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz';
-    const numbers = '0123456789';
-    const specialCharacters = '!@#$%^&*()_-+=<>?';
-    const allCharacters = uppercaseLetters + lowercaseLetters + numbers + specialCharacters;
+    const allCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_-+=<>?'
     let password = '';
     for(let i = 0; i < length; i++){
         const random = Math.floor(Math.random() * allCharacters.length);
@@ -11,5 +7,5 @@ function getpass(length){
     }
     return password
 }
-const password = getpass(80);
+const password = getpass(8);
 console.log(password);
